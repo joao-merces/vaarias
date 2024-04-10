@@ -75,44 +75,50 @@
                   </Label>
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
                      <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Resources/top%20rated.png" />
-                           </image>
-                        </ImageView>
-                        <Label prefHeight="40.0" prefWidth="158.0" text="Melhores">
+                        <Button fx:id="btnTopRated" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnTopRatedClicked" prefHeight="51.0" prefWidth="245.0" style="-fx-background-color: transparent;" styleClass="btn-moved" stylesheets="@Styles/styles.css" text="    Explore">
                            <font>
                               <Font size="18.0" />
                            </font>
-                        </Label>
+                           <graphic>
+                              <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resources/top%20rated.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
                      <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Resources/explore.png" />
-                           </image>
-                        </ImageView>
-                        <Label prefHeight="40.0" prefWidth="158.0" text="Explore">
+                        <Button fx:id="btnExplore" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnExploreClicked" prefHeight="51.0" prefWidth="245.0" style="-fx-background-color: transparent;" styleClass="btn-moved" stylesheets="@Styles/styles.css" text="    Explore">
                            <font>
                               <Font size="18.0" />
                            </font>
-                        </Label>
+                           <graphic>
+                              <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resources/explore.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
                      <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Resources/categories.png" />
-                           </image>
-                        </ImageView>
-                        <Label prefHeight="40.0" prefWidth="158.0" text="Categorias">
+                        <Button fx:id="btnCategories" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnCategoriesClicked" prefHeight="51.0" prefWidth="245.0" style="-fx-background-color: transparent;" styleClass="btn-moved" stylesheets="@Styles/styles.css" text="    Categorias">
                            <font>
                               <Font size="18.0" />
                            </font>
-                        </Label>
+                           <graphic>
+                              <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resources/categories.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                      </children>
                   </HBox>
                </children>
@@ -130,46 +136,52 @@
                   </Label>
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
                      <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Resources/reading.png" />
-                           </image>
-                        </ImageView>
-                        <Button fx:id="btnLibrary" alignment="CENTER" mnemonicParsing="false" onAction="#btnLibraryClicked" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Lendo">
+                        <Button fx:id="btnLibrary" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnLibraryClicked" prefHeight="51.0" prefWidth="245.0" style="-fx-background-color: transparent;" styleClass="btn-moved" stylesheets="@Styles/styles.css" text="   Lendo">
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resources/reading.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
                      <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Resources/favorite.png" />
-                           </image>
-                        </ImageView>
-                        <Label prefHeight="40.0" prefWidth="158.0" text="Favoritos">
+                        <Button fx:id="btnFavorite" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnFavoriteClicked" prefHeight="51.0" prefWidth="245.0" style="-fx-background-color: transparent;" styleClass="btn-moved" stylesheets="@Styles/styles.css" text="    Favoritos">
                            <font>
                               <Font size="18.0" />
                            </font>
-                        </Label>
-                     </children>
-                  </HBox>
+                           <graphic>
+                              <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resources/favorite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children></HBox>
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
                      <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Resources/history.png" />
-                           </image>
-                        </ImageView>
-                        <Label prefHeight="40.0" prefWidth="158.0" text="Histórico">
+                        <Button fx:id="btnHistory" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnHistoryClicked" prefHeight="51.0" prefWidth="245.0" style="-fx-background-color: transparent;" styleClass="btn-moved" stylesheets="@Styles/styles.css" text="    Histórico">
                            <font>
                               <Font size="18.0" />
                            </font>
-                        </Label>
+                           <graphic>
+                              <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Resources/history.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                      </children>
                   </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css" />
                </children>
             </VBox>
             <Separator prefWidth="200.0" />
@@ -183,20 +195,6 @@
                         <Insets left="10.0" />
                      </VBox.margin>
                   </Label>
-                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
-                     <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Resources/shelve.png" />
-                           </image>
-                        </ImageView>
-                        <Label prefHeight="40.0" prefWidth="158.0" text="Sua estante ">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
                   <HBox alignment="CENTER" prefHeight="73.0" prefWidth="250.0">
                      <children>
                         <Button fx:id="botaoCriarEstante" mnemonicParsing="false" onAction="#botaoCriarEstanteClicked" prefHeight="42.0" prefWidth="150.0" stylesheets="@Styles/styles.css" text="Criar uma estante nova" textFill="WHITE">
