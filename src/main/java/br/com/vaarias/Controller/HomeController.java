@@ -1,20 +1,27 @@
 package br.com.vaarias.Controller;
 
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+public class HomeController {
 
-public class HomeController implements Initializable {
+    @FXML
+    private Button btnHistory;
+
     @FXML
     private Label recomendados;
+
+    @FXML
+    private Button btnExplore;
+
+    @FXML
+    private Button btnTopRated;
+
+    @FXML
+    private Button btnCategories;
 
     @FXML
     private Button btnLibrary;
@@ -25,18 +32,41 @@ public class HomeController implements Initializable {
     @FXML
     private GridPane livroContainer;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        btnLibrary.setContentDisplay(ContentDisplay.LEFT);
+    @FXML
+    private Button btnFavorite;
+
+    @FXML
+    void btnTopRatedClicked(ActionEvent event) {
+        System.out.println("Button Top Rated Clicked");
+    }
+
+    @FXML
+    void btnExploreClicked(ActionEvent event) {
+        System.out.println("Button Explore Clicked");
+    }
+
+    @FXML
+    void btnCategoriesClicked(ActionEvent event) {
+        System.out.println("Button Categories Clicked");
     }
 
     @FXML
     void btnLibraryClicked(ActionEvent event) {
-        System.out.println("Botao biblioteca clicado!");
+        System.out.println("Button Library Clicked");
+    }
+
+    @FXML
+    void btnFavoriteClicked(ActionEvent event) {
+        System.out.println("Button Favorites Clicked");
+    }
+
+    @FXML
+    void btnHistoryClicked(ActionEvent event) {
+        System.out.println("Button History Clicked");
     }
 
     @FXML
     void botaoCriarEstanteClicked(ActionEvent event) {
-
+        System.out.println("Button Shelf Clicked");
     }
 }
