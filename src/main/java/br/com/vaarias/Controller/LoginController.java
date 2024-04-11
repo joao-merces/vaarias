@@ -1,6 +1,7 @@
 package br.com.vaarias.Controller;
 
 import br.com.vaarias.View.Home;
+import br.com.vaarias.View.SignUp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,8 +24,13 @@ public class LoginController {
     private PasswordField inputPassword;
 
     @FXML
-    void btnSignUpClicked(ActionEvent event) {
+    void btnSignUpClicked(ActionEvent event) throws Exception {
+        SignUp signUp = new SignUp();
+        Stage stage = new Stage();
+        signUp.start(stage);
 
+        stage = (Stage) btnSignUp.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
