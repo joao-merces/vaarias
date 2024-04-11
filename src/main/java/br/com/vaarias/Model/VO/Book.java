@@ -1,10 +1,19 @@
 package br.com.vaarias.Model.VO;
 
+import jakarta.persistence.*;
+
+@Table (name = "tb_book")
 public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "book_name", nullable = false)
     private String name;
+    @Column(name = "book_author", nullable = false)
     private String author;
+    @Column(name = "book_cover_url", nullable = false)
     private String coverUrl;
+    @Column(name = "book_price", nullable = false)
     private double price;
 
     public Book() {
