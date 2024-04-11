@@ -228,7 +228,7 @@
             </Label>
             <ScrollPane prefHeight="731.0" prefWidth="985.0">
                <content>
-                  <GridPane fx:id="livroContainer" prefHeight="2.0" prefWidth="0.0">
+                  <GridPane fx:id="bookContainer" prefHeight="2.0" prefWidth="0.0">
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
