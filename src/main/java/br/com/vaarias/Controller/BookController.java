@@ -50,7 +50,12 @@ public class BookController {
     };
 
     @FXML
-    void btnBuyClicked(ActionEvent event) throws Exception {
+    void btnBuyCardClicked(ActionEvent event) throws Exception {
+        System.out.println("Button Credit Card Clicked");
+    }
+
+    @FXML
+    void btnBuyPixClicked(ActionEvent event) throws Exception {
         PaymentPix paymentPix = new PaymentPix();
         Stage stage = new Stage();
         paymentPix.start(stage);

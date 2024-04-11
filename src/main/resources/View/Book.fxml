@@ -22,12 +22,23 @@
                </font>
             </Label>
             <Label fx:id="bookAuthor" prefHeight="22.0" prefWidth="160.0" text="Autor" />
-            <Button fx:id="btnBuy" mnemonicParsing="false" onAction="#btnBuyClicked" prefHeight="34.0" prefWidth="162.0" stylesheets="@Styles/styles.css" text="Comprar" textFill="WHITE">
-               <styleClass>
-                  <String fx:value="btn-color" />
-                  <String fx:value="btn-moved" />
-               </styleClass>
-            </Button>
+            <HBox prefHeight="34.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="btnBuyCard" mnemonicParsing="false" onAction="#btnBuyCardClicked" prefHeight="34.0" prefWidth="75.0" stylesheets="@Styles/styles.css" text="Cartão" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="btn-color" />
+                        <String fx:value="btn-moved" />
+                     </styleClass>
+                  </Button>
+                  <Separator orientation="VERTICAL" prefHeight="34.0" prefWidth="11.0" style="-fx-opacity: 0;" styleClass="transparent" stylesheets="@Styles/styles.css" />
+                  <Button fx:id="btnBuyPix" mnemonicParsing="false" onAction="#btnBuyPixClicked" prefHeight="34.0" prefWidth="75.0" stylesheets="@Styles/styles.css" text="Pix" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="btn-color" />
+                        <String fx:value="btn-moved" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>

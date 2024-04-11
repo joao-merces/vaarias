@@ -16,8 +16,8 @@ public class PaymentPix extends Application {
 
         stage.setTitle("Vaarias - Home");
         stage.setScene(scene);
-        stage.setWidth(415);
-        stage.setHeight(350);
+        stage.setWidth(590);
+        stage.setHeight(425);
         stage.setResizable(false);
         stage.show();
     }

@@ -27,12 +27,9 @@ public class ApiPIX {
                 BufferedImage bufferedImage = ImageIO.read(connection.getInputStream());
                 Image image = SwingFXUtils.toFXImage(bufferedImage, null);
                 return image;
-            } else {
-                System.out.println("Failed to fetch image. Response code: " + responseCode);
-                return null;
-            }
+            } else { return null;}
         } catch (IOException e) {
-            System.out.println("Error fetching image: " + e.getMessage());
+            System.out.println(e.getMessage());
             return null;
         }
     }
