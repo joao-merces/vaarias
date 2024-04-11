@@ -6,18 +6,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Home extends Application {
+public class PaymentPix extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/Home.fxml"));;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/PaymentPix.fxml"));
         Parent root = loader.load();
 
         Scene scene = new Scene(root);
 
         stage.setTitle("Vaarias - Home");
         stage.setScene(scene);
-        stage.setWidth(1280);
-        stage.setHeight(722);
+        stage.setWidth(590);
+        stage.setHeight(425);
         stage.setResizable(false);
         stage.show();
     }
@@ -26,3 +26,4 @@ public class Home extends Application {
         launch(args);
     }
 }
+

@@ -1,13 +1,21 @@
 package br.com.vaarias.Model.VO;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Table(name = "tb_user")
 public class User {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String name;
     private String surname;
     private String email;
     private String password;
 
-    public User(int id, String name, String surname, String email, String password) {
+    public User(Long id, String name, String surname, String email, String password) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -15,11 +23,11 @@ public class User {
         this.password = password;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
