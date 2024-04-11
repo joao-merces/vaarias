@@ -1,6 +1,7 @@
 package br.com.vaarias.Controller;
 
 import br.com.vaarias.Model.VO.Book;
+import br.com.vaarias.View.PaymentCreditCard;
 import br.com.vaarias.View.PaymentPix;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -51,7 +52,9 @@ public class BookController {
 
     @FXML
     void btnBuyCardClicked(ActionEvent event) throws Exception {
-        System.out.println("Button Credit Card Clicked");
+        PaymentCreditCard paymentCreditCard = new PaymentCreditCard();
+        Stage stage = new Stage();
+        paymentCreditCard.start(stage);
     }
 
     @FXML

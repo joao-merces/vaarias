@@ -22,7 +22,7 @@ public class PaymentPixController implements Initializable {
         label.setText("É só ler o QRCode ao lado\ne esperar alguns minutos \uD83D\uDE09");
         String path = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example";
         ApiPIX apiPIX = new ApiPIX(path);
-        Image qrCode = apiPIX.getQRCode(); // Removido o argumento apiUrl
+        Image qrCode = apiPIX.getQRCode();
         imagePix.setImage(qrCode);
     }
 }

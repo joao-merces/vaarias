@@ -1,5 +1,6 @@
 package br.com.vaarias.Model.VO;
 
+import jakarta.persistence.*;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -11,8 +12,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Column(name = "user_surname", nullable = false)
     private String surname;
+    @Column(name = "user_email", nullable = false)
     private String email;
+    @Column(name = "user_password", nullable = false)
     private String password;
 
     public User(Long id, String name, String surname, String email, String password) {

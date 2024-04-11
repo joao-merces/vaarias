@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="341.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.vaarias.Controller.PaymentCreditCardController">
+   <children>
+      <Label layoutX="54.0" layoutY="91.0" text="Nome no Cartão" />
+      <TextField fx:id="entryName" layoutX="54.0" layoutY="115.0" promptText="Nome" />
+      <TextField fx:id="entryCPF" layoutX="237.0" layoutY="115.0" promptText="CPF" />
+      <Label layoutX="237.0" layoutY="91.0" text="CPF" />
+      <Label layoutX="235.0" layoutY="164.0" text="Código de Verificação" />
+      <TextField fx:id="entryVerificationCode" layoutX="235.0" layoutY="188.0" promptText="Código de Verificação" />
+      <TextField fx:id="entryCardNumber" layoutX="52.0" layoutY="188.0" promptText="Número do Cartão" />
+      <Label layoutX="52.0" layoutY="164.0" text="Número do cartão" />
+      <Button fx:id="btnBuy" layoutX="172.0" layoutY="235.0" mnemonicParsing="false" onAction="#btnBuy" prefHeight="46.0" prefWidth="88.0" stylesheets="@Styles/styles.css" text="Comprar" textFill="WHITE">
+         <styleClass>
+            <String fx:value="btn-color" />
+            <String fx:value="btn-moved" />
+         </styleClass>
+      </Button>
+      <Label layoutX="161.0" layoutY="34.0" text="Vaarias" textFill="#ff5056">
+         <font>
+            <Font name="Serif Regular" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
