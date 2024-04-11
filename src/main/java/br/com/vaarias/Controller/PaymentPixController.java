@@ -17,12 +17,16 @@ public class PaymentPixController implements Initializable {
     @FXML
     private Label label;
 
+    public void callApiPaymentPix() {
+        String url = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example";
+        ApiPIX apiPIX = new ApiPIX(url);
+        Image qrCode = apiPIX.getQRCode();
+        imagePix.setImage(qrCode);
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         label.setText("É só ler o QRCode ao lado\ne esperar alguns minutos \uD83D\uDE09");
-        String path = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example";
-        ApiPIX apiPIX = new ApiPIX(path);
-        Image qrCode = apiPIX.getQRCode();
-        imagePix.setImage(qrCode);
+        callApiPaymentPix();
     }
 }
