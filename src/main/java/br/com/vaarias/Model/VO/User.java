@@ -1,18 +1,20 @@
 package br.com.vaarias.Model.VO;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Table(name = "tb_user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "user_name", nullable = false)
     private String name;
+    @Column(name = "user_surname", nullable = false)
     private String surname;
+    @Column(name = "user_email", nullable = false)
+
     private String email;
+    @Column(name = "user_password", nullable = false)
     private String password;
 
     public User(Long id, String name, String surname, String email, String password) {
