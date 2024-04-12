@@ -1,6 +1,8 @@
 package br.com.vaarias.Controller;
 
+import br.com.vaarias.Services.CheckCPF;
 import br.com.vaarias.Services.EncryptDecrypt;
+import br.com.vaarias.Services.CheckEmail;
 import br.com.vaarias.View.Login;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,14 +39,29 @@ public class SignUpController {
     @FXML
     void btnSignUpClicked(ActionEvent event) throws Exception {
 
-        String password = inputPassword.getText();
-        System.out.println("Senha: " + password);
+        CheckEmail checkEmail = new CheckEmail();
         EncryptDecrypt encryptDecrypt = new EncryptDecrypt();
+        CheckCPF checkCPF = new CheckCPF();
+
+        String password = inputPassword.getText();
+        String email = inputEmail.getText();
+        String cpf = inputCPF.getText();
+
+        System.out.println("Senha: " + password);
         String encryptedPassword = encryptDecrypt.encrypt(password);
         System.out.println("Senha criptografada: " + encryptedPassword);
         String decryptedPassword = encryptDecrypt.decrypt(encryptedPassword);
-        System.out.println("Senha desin: " + decryptedPassword);
-        System.out.println("Button Sign Up Clicked");
+        System.out.println("Senha desincriptografada: " + decryptedPassword);
+        System.out.println("");
+        System.out.println("email: " + email);
+        if(checkEmail.CheckEmailPattern(email)) {
+            System.out.println("Email valido");
+        } else System.out.println("Email invalido");
+        System.out.println("");
+        System.out.println("CPF: " + cpf);
+        if(checkCPF.CheckCPFPattern(cpf)) {
+            System.out.println("CPF válido");
+        } else System.out.println("CPF inválido");
     }
 
     @FXML
