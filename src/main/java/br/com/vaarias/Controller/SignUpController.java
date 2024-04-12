@@ -1,19 +1,21 @@
 package br.com.vaarias.Controller;
 
+import br.com.vaarias.Model.RN.SignUpRN;
 import br.com.vaarias.Services.CheckCPF;
 import br.com.vaarias.Services.EncryptDecrypt;
 import br.com.vaarias.Services.CheckEmail;
 import br.com.vaarias.View.Login;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.net.URL;
+import java.time.LocalDate;
+import java.util.ResourceBundle;
 
-public class SignUpController {
+public class SignUpController implements Initializable {
 
     @FXML
     private TextField inputCPF;
@@ -35,33 +37,32 @@ public class SignUpController {
 
     @FXML
     private TextField inputName;
+    @FXML
+    private Label labelErrorAlert;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        labelErrorAlert.setVisible(false);
+    }
 
     @FXML
     void btnSignUpClicked(ActionEvent event) throws Exception {
 
-        CheckEmail checkEmail = new CheckEmail();
-        EncryptDecrypt encryptDecrypt = new EncryptDecrypt();
-        CheckCPF checkCPF = new CheckCPF();
+        SignUpRN signUpRN = new SignUpRN();
 
+        String name = inputName.getText();
         String password = inputPassword.getText();
         String email = inputEmail.getText();
         String cpf = inputCPF.getText();
+        LocalDate birthday = inputBirthday.getValue();
 
-        System.out.println("Senha: " + password);
-        String encryptedPassword = encryptDecrypt.encrypt(password);
-        System.out.println("Senha criptografada: " + encryptedPassword);
-        String decryptedPassword = encryptDecrypt.decrypt(encryptedPassword);
-        System.out.println("Senha desincriptografada: " + decryptedPassword);
-        System.out.println("");
-        System.out.println("email: " + email);
-        if(checkEmail.CheckEmailPattern(email)) {
-            System.out.println("Email valido");
-        } else System.out.println("Email invalido");
-        System.out.println("");
-        System.out.println("CPF: " + cpf);
-        if(checkCPF.CheckCPFPattern(cpf)) {
-            System.out.println("CPF válido");
-        } else System.out.println("CPF inválido");
+        if(signUpRN.checkEmailEmpty(email) && signUpRN.checkPasswordEmpty(password) &&
+          signUpRN.checkNameEmpty(name) && signUpRN.checkCPFEmpty(cpf)) {
+
+        } else {
+            labelErrorAlert.setText("Verifique se todos os campos foram preenchidos!");
+            labelErrorAlert.setVisible(true);
+        }
     }
 
     @FXML

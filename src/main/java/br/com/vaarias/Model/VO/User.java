@@ -13,17 +13,14 @@ public class User {
     private Long id;
     @Column(name = "user_name", nullable = false)
     private String name;
-    @Column(name = "user_surname", nullable = false)
-    private String surname;
     @Column(name = "user_email", nullable = false)
     private String email;
     @Column(name = "user_password", nullable = false)
     private String password;
 
-    public User(Long id, String name, String surname, String email, String password) {
+    public User(Long id, String name, String email, String password) {
         this.id = id;
         this.name = name;
-        this.surname = surname;
         this.email = email;
         this.password = password;
     }
@@ -42,14 +39,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public String getEmail() {
