@@ -1,6 +1,6 @@
 package br.com.vaarias.Controller;
 
-import br.com.vaarias.View.Home;
+import br.com.vaarias.Services.EncryptDecrypt;
 import br.com.vaarias.View.Login;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +9,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 
 public class SignUpController {
 
@@ -34,8 +35,16 @@ public class SignUpController {
     private TextField inputName;
 
     @FXML
-    void btnSignUpClicked(ActionEvent event) {
+    void btnSignUpClicked(ActionEvent event) throws Exception {
 
+        String password = inputPassword.getText();
+        System.out.println("Senha: " + password);
+        EncryptDecrypt encryptDecrypt = new EncryptDecrypt();
+        String encryptedPassword = encryptDecrypt.encrypt(password);
+        System.out.println("Senha criptografada: " + encryptedPassword);
+        String decryptedPassword = encryptDecrypt.decrypt(encryptedPassword);
+        System.out.println("Senha desin: " + decryptedPassword);
+        System.out.println("Button Sign Up Clicked");
     }
 
     @FXML
