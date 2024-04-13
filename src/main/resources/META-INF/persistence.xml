@@ -5,7 +5,7 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/vaarias?zeroDateTimeBehavior=convertToNull"/>
             <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.password" value="24667070"/>
+            <property name="javax.persistence.jdbc.password" value="12345678"/>
             <property name="hibernate.cache.use_second_level_cache" value="false"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>

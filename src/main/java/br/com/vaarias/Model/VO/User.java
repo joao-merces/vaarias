@@ -8,6 +8,7 @@ import jakarta.persistence.Table;
 
 import java.time.LocalDate;
 
+@Entity
 @Table(name = "tb_user")
 public class User {
     @Id

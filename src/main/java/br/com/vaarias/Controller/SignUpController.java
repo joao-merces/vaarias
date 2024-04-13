@@ -73,7 +73,7 @@ public class SignUpController implements Initializable {
                 userDAO.save(user);
             }
         } else {
-            labelErrorAlert.setText("Verifique se todos os campos foram preenchidos!");
+            labelErrorAlert.setText("Verifique os dados e tente novamente!");
             labelErrorAlert.setVisible(true);
         }
     }

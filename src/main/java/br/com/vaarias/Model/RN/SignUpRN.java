@@ -5,13 +5,10 @@ import br.com.vaarias.Model.DAO.Interfaces.UserDAO;
 import br.com.vaarias.Model.VO.User;
 
 public class SignUpRN {
-    /*
-    private final UserDAO userDAO;
-
+    private final UserDAOImpl userDAO;
     public SignUpRN() {
-        userDAO = (UserDAO) new UserDAOImpl();
+        userDAO = new UserDAOImpl();
     }
-    */
     public static boolean checkEmailEmpty(String email) {
         if (email.isEmpty()) {
             return false;

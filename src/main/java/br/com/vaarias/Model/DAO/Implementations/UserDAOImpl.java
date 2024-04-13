@@ -2,7 +2,6 @@ package br.com.vaarias.Model.DAO.Implementations;
 
 import br.com.vaarias.Model.VO.User;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.Query;
 
 public class UserDAOImpl {
     EntityManager manager;

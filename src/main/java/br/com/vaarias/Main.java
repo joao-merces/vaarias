@@ -9,7 +9,6 @@ public class Main {
 
     public static void startConnectionDb() {
         EntityManager manager;
-
         manager =  ConnectDBImpl.getInstance();
     }
 
