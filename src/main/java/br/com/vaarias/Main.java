@@ -14,7 +14,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        //startConnectionDb();
+        startConnectionDb();
         Application.launch(Login.class);
     }
 }

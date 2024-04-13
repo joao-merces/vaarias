@@ -1,9 +1,10 @@
 package br.com.vaarias.Controller;
 
+import br.com.vaarias.Model.DAO.Implementations.UserDAOImpl;
+import br.com.vaarias.Model.DAO.Interfaces.UserDAO;
 import br.com.vaarias.Model.RN.SignUpRN;
-import br.com.vaarias.Services.CheckCPF;
-import br.com.vaarias.Services.EncryptDecrypt;
-import br.com.vaarias.Services.CheckEmail;
+import br.com.vaarias.Model.VO.User;
+import br.com.vaarias.Services.*;
 import br.com.vaarias.View.Login;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,6 +38,7 @@ public class SignUpController implements Initializable {
 
     @FXML
     private TextField inputName;
+    
     @FXML
     private Label labelErrorAlert;
 
@@ -48,7 +50,9 @@ public class SignUpController implements Initializable {
     @FXML
     void btnSignUpClicked(ActionEvent event) throws Exception {
 
-        SignUpRN signUpRN = new SignUpRN();
+        UserDAO userDAO = (UserDAO) new UserDAOImpl();
+        Checker cheker = new Checker();
+        EncryptDecrypt encryptDecrypt = new EncryptDecrypt();
 
         String name = inputName.getText();
         String password = inputPassword.getText();
@@ -56,9 +60,17 @@ public class SignUpController implements Initializable {
         String cpf = inputCPF.getText();
         LocalDate birthday = inputBirthday.getValue();
 
-        if(signUpRN.checkEmailEmpty(email) && signUpRN.checkPasswordEmpty(password) &&
-          signUpRN.checkNameEmpty(name) && signUpRN.checkCPFEmpty(cpf)) {
+        if(cheker.checkAllEmpty(cpf, name, email, password)) {
+            if(cheker.checkPatternAll(cpf, email, password)) {
+                User user = new User();
 
+                user.setPassword(encryptDecrypt.encrypt(password));
+                user.setName(name);
+                user.setEmail(email);
+                user.setCpf(cpf);
+                user.setBirthday(inputBirthday.getValue());
+                userDAO.salvar(user);
+            }
         } else {
             labelErrorAlert.setText("Verifique se todos os campos foram preenchidos!");
             labelErrorAlert.setVisible(true);
