@@ -38,7 +38,7 @@ public class SignUpController implements Initializable {
 
     @FXML
     private TextField inputName;
-    
+
     @FXML
     private Label labelErrorAlert;
 
@@ -50,7 +50,8 @@ public class SignUpController implements Initializable {
     @FXML
     void btnSignUpClicked(ActionEvent event) throws Exception {
 
-        UserDAO userDAO = (UserDAO) new UserDAOImpl();
+        UserDAOImpl userDAO = new UserDAOImpl();
+
         Checker cheker = new Checker();
         EncryptDecrypt encryptDecrypt = new EncryptDecrypt();
 
@@ -69,7 +70,7 @@ public class SignUpController implements Initializable {
                 user.setEmail(email);
                 user.setCpf(cpf);
                 user.setBirthday(inputBirthday.getValue());
-                userDAO.salvar(user);
+                userDAO.save(user);
             }
         } else {
             labelErrorAlert.setText("Verifique se todos os campos foram preenchidos!");
