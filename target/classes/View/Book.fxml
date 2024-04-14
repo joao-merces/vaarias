@@ -7,9 +7,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="bookBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="180.0" style="-fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.vaarias.Controller.BookController">
+<VBox fx:id="bookBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="180.0" style="-fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.vaarias.Controller.BookController">
    <children>
-      <ImageView fx:id="bookCover" fitHeight="220.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bookCover" fitHeight="255.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Covers/diario_de_um_banana.jpg" />
          </image>
@@ -22,6 +22,11 @@
                </font>
             </Label>
             <Label fx:id="bookAuthor" prefHeight="22.0" prefWidth="160.0" text="Autor" />
+            <Label fx:id="labelPrice" prefHeight="33.0" prefWidth="160.0" text="R$ 00,00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
             <HBox prefHeight="34.0" prefWidth="160.0">
                <children>
                   <Button fx:id="btnBuyCard" mnemonicParsing="false" onAction="#btnBuyCardClicked" prefHeight="34.0" prefWidth="75.0" stylesheets="@Styles/styles.css" text="Cartão" textFill="WHITE">

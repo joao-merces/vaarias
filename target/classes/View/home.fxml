@@ -24,12 +24,12 @@
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1301.0" styleClass="white-background" stylesheets="@Styles/styles.css" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="60.0" prefWidth="189.0" text="Variaas" textFill="#ff5056">
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="189.0" text="Vaarias" textFill="#ff5056">
                <font>
                   <Font name="Serif Bold" size="36.0" />
                </font>
             </Label>
-            <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="39.0" prefWidth="7.0" />
+            <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="39.0" prefWidth="7.0" style="-fx-opacity: 0;" />
             <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="35.0" prefWidth="290.0" style="-fx-background-radius: 50;" stylesheets="@Styles/styles.css">
                <children>
                   <TextField prefHeight="25.0" prefWidth="250.0" promptText="Pesquise" style="-fx-background-radius: 50;" stylesheets="@Styles/styles.css" />
@@ -40,18 +40,20 @@
                   </ImageView>
                </children></HBox>
             <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="155.0">
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="155.0" styleClass="mouse-moved" stylesheets="@Styles/styles.css">
                <children>
-                  <Label prefHeight="27.0" prefWidth="75.0" text="Usuário">
+                  <Button fx:id="btnUser" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnUserClicked" prefHeight="80.0" prefWidth="270.0" style="-fx-background-color: 0;" styleClass="mouse-moved" stylesheets="@Styles/styles.css" text="Usuário">
+                     <graphic>
+                        <ImageView fitHeight="51.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Resources/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                      <font>
                         <Font size="18.0" />
                      </font>
-                  </Label>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Resources/user.png" />
-                     </image>
-                  </ImageView>
+                  </Button>
                </children>
             </HBox>
          </children>

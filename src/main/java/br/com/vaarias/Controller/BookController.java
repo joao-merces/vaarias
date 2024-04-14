@@ -28,6 +28,9 @@ public class BookController {
     @FXML
     private Label bookAuthor;
 
+    @FXML
+    private Label labelPrice;
+
 
     private String[] colors = {
             "FFDAB9", // Pêssego
@@ -70,6 +73,8 @@ public class BookController {
         String coverUrl = book.getCoverUrl();
         Image img = new Image(coverUrl);
         bookCover.setImage(img);
+        String priceString = String.valueOf(book.getPrice());
+        labelPrice.setText("R$ " + priceString);
 
         bookBox.setStyle("-fx-background-color: #" + colors[(int) (Math.random() * colors.length)] + ";"
                 + "-fx-background-radius: 15;");

@@ -7,7 +7,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="background" stylesheets="@Styles/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.vaarias.Controller.LoginController">
    <children>
-      <Label layoutX="80.0" layoutY="137.0" text="Usuário">
+      <Label layoutX="80.0" layoutY="137.0" text="Email">
          <font>
             <Font size="24.0" />
          </font>

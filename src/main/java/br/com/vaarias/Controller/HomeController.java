@@ -40,6 +40,9 @@ public class HomeController implements Initializable {
     private Button btnLibrary;
 
     @FXML
+    private Button btnUser;
+
+    @FXML
     private Button botaoCriarEstante;
 
     @FXML
@@ -80,8 +83,6 @@ public class HomeController implements Initializable {
         }
     }
 
-
-
     @FXML
     void btnTopRatedClicked(ActionEvent event) {
         System.out.println("Button Top Rated Clicked");
@@ -115,5 +116,10 @@ public class HomeController implements Initializable {
     @FXML
     void botaoCriarEstanteClicked(ActionEvent event) {
         System.out.println("Button Shelf Clicked");
+    }
+
+    @FXML
+    void btnUserClicked(ActionEvent event) {
+        System.out.println("Button user clicked");
     }
 }
