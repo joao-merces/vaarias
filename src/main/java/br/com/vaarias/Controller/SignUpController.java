@@ -1,8 +1,6 @@
 package br.com.vaarias.Controller;
 
 import br.com.vaarias.Model.DAO.Implementations.UserDAOImpl;
-import br.com.vaarias.Model.DAO.Interfaces.UserDAO;
-import br.com.vaarias.Model.RN.SignUpRN;
 import br.com.vaarias.Model.VO.User;
 import br.com.vaarias.Services.*;
 import br.com.vaarias.View.Login;
@@ -70,7 +68,9 @@ public class SignUpController implements Initializable {
                 user.setEmail(email);
                 user.setCpf(cpf);
                 user.setBirthday(inputBirthday.getValue());
-                userDAO.save(user);
+                userDAO.saveUser(user);
+                labelErrorAlert.setText("Cadastrado com sucesso!");
+                labelErrorAlert.setVisible(true);
             }
         } else {
             labelErrorAlert.setText("Verifique os dados e tente novamente!");
