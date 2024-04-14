@@ -6,6 +6,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import java.time.LocalDate;
+
+@Entity
 @Table (name = "tb_credit_card")
 public class CreditCard {
     @Id
@@ -17,15 +20,18 @@ public class CreditCard {
     private String verificationCode;
     @Column(name = "credit_card_client_name", nullable = false)
     private String clientName;
-    @Column(name = "credit_card_client_cpf", nullable = false)
-    private String cpf;
+    @Column(name = "credit_card_expiration", nullable = false)
+    private LocalDate cardExpiration;
+    public CreditCard() {
 
-    public CreditCard(Long id, String number, String verificationCode, String clientName, String cpf) {
+    }
+
+    public CreditCard(Long id, String number, String verificationCode, String clientName, LocalDate cardExpiration) {
         this.id = id;
         this.number = number;
         this.verificationCode = verificationCode;
         this.clientName = clientName;
-        this.cpf = cpf;
+        this.cardExpiration = cardExpiration;
     }
 
     public Long getId() {
@@ -60,11 +66,11 @@ public class CreditCard {
         this.clientName = clientName;
     }
 
-    public String getCpf() {
-        return cpf;
+    public LocalDate getCardExpiration() {
+        return cardExpiration;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCardExpiration(LocalDate cardExpiration) {
+        this.cardExpiration = cardExpiration;
     }
 }
