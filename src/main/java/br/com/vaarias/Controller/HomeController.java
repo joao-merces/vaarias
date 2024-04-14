@@ -1,5 +1,7 @@
 package br.com.vaarias.Controller;
 
+import br.com.vaarias.Model.DAO.Implementations.BookDAOImpl;
+import br.com.vaarias.Model.DAO.Interfaces.BookDAO;
 import br.com.vaarias.Model.VO.Book;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -53,10 +55,10 @@ public class HomeController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        RecommendedBooks = new ArrayList<>(book());
+        BookDAOImpl bookDAO = new BookDAOImpl();
+        RecommendedBooks = bookDAO.getAllBooks();
         int column = 0;
         int row = 1;
-
         try{
             for(Book book: RecommendedBooks) {
                 FXMLLoader loader = new FXMLLoader();
@@ -77,6 +79,8 @@ public class HomeController implements Initializable {
             e.printStackTrace();
         }
     }
+
+
 
     @FXML
     void btnTopRatedClicked(ActionEvent event) {
@@ -111,35 +115,5 @@ public class HomeController implements Initializable {
     @FXML
     void botaoCriarEstanteClicked(ActionEvent event) {
         System.out.println("Button Shelf Clicked");
-    }
-
-    private List<Book> book() {
-        List<Book> ls = new ArrayList<>();
-        Book book = new Book();
-        book.setAuthor("Charles Duhigg");
-        book.setName("O Poder Do Hábito");
-        book.setCoverUrl("/Covers/o_poder_do_habito.jpg");
-        ls.add(book);
-
-        book.setAuthor("Charles Duhigg");
-        book.setName("O Poder Do Hábito");
-        book.setCoverUrl("/Covers/o_poder_do_habito.jpg");
-        ls.add(book);
-
-        book.setAuthor("Charles Duhigg");
-        book.setName("O Poder Do Hábito");
-        book.setCoverUrl("/Covers/o_poder_do_habito.jpg");
-        ls.add(book);
-
-        book.setAuthor("Charles Duhigg");
-        book.setName("O Poder Do Hábito");
-        book.setCoverUrl("/Covers/o_poder_do_habito.jpg");
-        ls.add(book);
-
-        book.setAuthor("Charles Duhigg");
-        book.setName("O Poder Do Hábito");
-        book.setCoverUrl("/Covers/o_poder_do_habito.jpg");
-        ls.add(book);
-        return ls;
     }
 }

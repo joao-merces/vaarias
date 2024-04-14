@@ -3,7 +3,6 @@ package br.com.vaarias.Model.DAO.Implementations;
 import br.com.vaarias.Model.VO.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
-import org.hibernate.Session;
 
 import java.util.List;
 

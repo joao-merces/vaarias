@@ -2,7 +2,7 @@ package br.com.vaarias.Model.VO;
 
 import jakarta.persistence.*;
 
-
+@Entity
 @Table(name = "tb_book")
 public class Book {
     @Id

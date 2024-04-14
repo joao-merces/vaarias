@@ -2,10 +2,6 @@ package br.com.vaarias.Services;
 
 import br.com.vaarias.Model.DAO.Implementations.UserDAOImpl;
 import br.com.vaarias.Model.VO.User;
-import org.hibernate.Session;
-import org.hibernate.Session;
-import org.hibernate.query.Query;
-
 
 public class LogIn {
 
