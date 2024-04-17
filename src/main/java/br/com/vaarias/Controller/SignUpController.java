@@ -23,9 +23,6 @@ public class SignUpController implements Initializable {
     private Button btnBack;
 
     @FXML
-    private Button btnSignUp;
-
-    @FXML
     private TextField inputEmail;
 
     @FXML
@@ -40,9 +37,13 @@ public class SignUpController implements Initializable {
     @FXML
     private Label labelErrorAlert;
 
+    @FXML
+    private Label labelSuccess;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         labelErrorAlert.setVisible(false);
+        labelSuccess.setVisible(false);
     }
 
     @FXML
@@ -59,22 +60,20 @@ public class SignUpController implements Initializable {
         String cpf = inputCPF.getText();
         LocalDate birthday = inputBirthday.getValue();
 
-        if(cheker.checkAllEmpty(cpf, name, email, password)) {
-            if(cheker.checkPatternAll(cpf, email, password)) {
-                User user = new User();
-
-                user.setPassword(encryptDecrypt.encrypt(password));
-                user.setName(name);
-                user.setEmail(email);
-                user.setCpf(cpf);
-                user.setBirthday(inputBirthday.getValue());
-                userDAO.saveUser(user);
-                labelErrorAlert.setText("Cadastrado com sucesso!");
-                labelErrorAlert.setVisible(true);
-            }
-        } else {
+        if(!(cheker.checkAllEmpty(cpf, name, email, password)) &
+                !(cheker.checkPatternAll(cpf, email, password))) {
             labelErrorAlert.setText("Verifique os dados e tente novamente!");
             labelErrorAlert.setVisible(true);
+        } else {
+            User user = new User();
+
+            user.setPassword(encryptDecrypt.encrypt(password));
+            user.setName(name);
+            user.setEmail(email);
+            user.setCpf(cpf);
+            user.setBirthday(inputBirthday.getValue());
+            userDAO.saveUser(user);
+            labelSuccess.setVisible(true);
         }
     }
 

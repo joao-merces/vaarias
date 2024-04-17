@@ -26,5 +26,15 @@
          </font>
       </Label>
       <DatePicker fx:id="entryExpirationDate" layoutX="235.0" layoutY="115.0" prefHeight="25.0" prefWidth="149.0" promptText="Expiraçao" />
+      <Label fx:id="labelSucces" layoutX="178.0" layoutY="300.0" text="Comprado!" textFill="#ff5056">
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelFailed" layoutX="138.0" layoutY="300.0" text="Verifique os campos!" textFill="#ff5056">
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

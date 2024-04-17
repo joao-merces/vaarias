@@ -17,7 +17,7 @@ public class PaymentCreditCard extends Application {
         stage.setTitle("Vaarias - Home");
         stage.setScene(scene);
         stage.setWidth(437);
-        stage.setHeight(341);
+        stage.setHeight(380);
         stage.setResizable(false);
         stage.show();
     }

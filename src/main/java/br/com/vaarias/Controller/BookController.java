@@ -17,9 +17,6 @@ public class BookController {
     private VBox bookBox;
 
     @FXML
-    private Button btnBuy;
-
-    @FXML
     private ImageView bookCover;
 
     @FXML
