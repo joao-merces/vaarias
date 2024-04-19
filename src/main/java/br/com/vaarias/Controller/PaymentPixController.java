@@ -26,7 +26,7 @@ public class PaymentPixController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        label.setText("É só ler o QRCode ao lado\ne esperar alguns minutos \uD83D\uDE09");
+        label.setText("É só ler o QRCode ao lado\ne esperar alguns minutos 😉");
         callApiPaymentPix();
     }
 }

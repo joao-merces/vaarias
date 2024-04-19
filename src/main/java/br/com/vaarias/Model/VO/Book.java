@@ -2,6 +2,10 @@ package br.com.vaarias.Model.VO;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 @Entity
 @Table(name = "tb_book")
 public class Book {
@@ -16,6 +20,12 @@ public class Book {
     private String coverUrl;
     @Column(name = "book_price", nullable = false)
     private double price;
+
+    @ManyToMany
+    @JoinTable(name = "tb_book_category",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "ccgory_id"))
+    private List<Category> categories = new ArrayList<>();
 
     public Book() {
     }
